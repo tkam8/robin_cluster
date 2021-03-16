@@ -25,9 +25,9 @@
 
 # Install NTP
 - name: Install ntp
-    yum:
-      name: ntp
-      state: latest
+  yum:
+    name: ntp
+    state: latest
 
 # Enable NTPD
 - name: Start and Enable ntpd.
