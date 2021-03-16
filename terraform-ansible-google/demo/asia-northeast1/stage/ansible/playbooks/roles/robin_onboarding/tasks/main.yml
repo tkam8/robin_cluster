@@ -33,7 +33,7 @@
 - name: Start and Enable ntpd.
   service:
     name: ntpd
-    state: start
+    state: started
     enabled: True
 
 # Install kexec-tools
