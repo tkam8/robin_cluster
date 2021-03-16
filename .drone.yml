@@ -38,7 +38,7 @@ steps:
     BIGIP_PASS:
       from_secret: bigip_pass
   commands: 
-  # Ansible complains that the drone generated netrc file being too permissive by default
+  # Ansible complains that the drone generated netrc file being too permissive by default (fixed)
   - ls -lah /root
   # .netrc file does not exist here so will comment this out for now
   #- chmod 600 /root/.netrc
