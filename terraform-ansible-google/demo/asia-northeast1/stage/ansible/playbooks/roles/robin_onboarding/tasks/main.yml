@@ -23,6 +23,19 @@
     state: stopped
     enabled: False
 
+# Install NTP
+- name: Install ntp
+    yum:
+      name: ntp
+      state: latest
+
+# Enable NTPD
+- name: Start and Enable ntpd.
+  service:
+    name: ntpd
+    state: start
+    enabled: True
+
 # Install kexec-tools
 - name: install the latest version of kexec-tools
   yum:
