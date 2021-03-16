@@ -25,7 +25,7 @@ include {
 }
 
 dependency "bigip1" {
-  config_path = "../functions/bip1"
+  config_path = "../functions/bip_ecmp"
 
   mock_outputs = {
     bigip1_public_ip    = "1.1.1.1"
@@ -72,6 +72,6 @@ inputs = {
   // cluster1_password            = dependency.gke1.outputs.cluster_password
   // cluster2_password            = dependency.gke2.outputs.cluster_password
   // cluster3_password            = dependency.gke3.outputs.cluster_password
-  bigip1_public_ip             = dependency.bigip1.outputs.f5_public_ip
-  bigip1_private_ip            = dependency.bigip1.outputs.f5_private_ip
+  bigip1_public_ip             = dependency.bigip_ecmp.outputs.f5_public_ip
+  bigip1_private_ip            = dependency.bigip_ecmp.outputs.f5_private_ip
 }
