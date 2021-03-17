@@ -19,7 +19,7 @@ inputs = {
   project               = "f5-gcs-4261-sales-apcj-japan"
   region                = "asia-northeast1"
   cidr_block            = "10.97.0.0/16"
-  // cidr2_block           = "10.27.0.0/16"
+  cidr2_block           = "10.27.0.0/16"
   secondary_cidr_block  = "10.98.0.0/16"
-  // secondary2_cidr_block = "10.28.0.0/16"
+  secondary2_cidr_block = "10.28.0.0/16"
 }
