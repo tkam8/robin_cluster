@@ -56,6 +56,8 @@ dependency "robin3" {
     robin3_public_ip    = "1.1.1.6"
     robin3_private_ip   = "2.2.2.7"
   }
+
+  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
 }
 
 
