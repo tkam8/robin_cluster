@@ -31,7 +31,7 @@ dependency "bigip1" {
     bigip1_public_ip    = "1.1.1.1"
     bigip1_private_ip   = "2.2.2.2"
   }
-  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
+  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy", "output"]
 }
 
 dependency "robin1" {
@@ -41,7 +41,7 @@ dependency "robin1" {
     robin1_public_ip    = "1.1.1.4"
     robin1_private_ip   = "2.2.2.5"
   }
-  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
+  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy", "output"]
 }
 dependency "robin2" {
   config_path = "../functions/robin_worker1"
@@ -50,7 +50,7 @@ dependency "robin2" {
     robin2_public_ip    = "1.1.1.5"
     robin2_private_ip   = "2.2.2.6"
   }
-  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
+  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy", "output"]
 }
 dependency "robin3" {
   config_path = "../functions/robin_worker2"
@@ -59,7 +59,7 @@ dependency "robin3" {
     robin3_public_ip    = "1.1.1.6"
     robin3_private_ip   = "2.2.2.7"
   }
-  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
+  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy", "output"]
 }
 
 
