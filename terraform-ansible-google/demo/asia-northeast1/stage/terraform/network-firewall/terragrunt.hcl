@@ -38,14 +38,19 @@ inputs = {
   project                 = "f5-gcs-4261-sales-apcj-japan"
   region                  = "asia-northeast1"
   network                 = dependency.vpc.outputs.network
+  network2                = dependency.vpc.outputs.network2
   allowed_networks        = ["210.226.41.0/24"]
 
   public_subnetwork       = dependency.vpc.outputs.public_subnetwork
   private_subnetwork      = dependency.vpc.outputs.private_subnetwork
+  private_subnetwork2     = dependency.vpc.outputs.private_subnetwork2
 
   pub_subnw_range         = dependency.vpc.outputs.public_subnetwork_cidr_block
   pub_subnw_range_scndry  = dependency.vpc.outputs.public_subnetwork_secondary_cidr_block
   priv_subnw_range        = dependency.vpc.outputs.private_subnetwork_cidr_block
   priv_subnw_range_scndry = dependency.vpc.outputs.private_subnetwork_secondary_cidr_block
+
+  priv_subnw_range2        = dependency.vpc.outputs.private_subnetwork2_cidr_block
+  priv_subnw_range_scndry2 = dependency.vpc.outputs.private_subnetwork2_secondary_cidr_block
 
 }

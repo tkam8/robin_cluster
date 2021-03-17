@@ -29,7 +29,7 @@ inputs = {
   region               = "asia-northeast1"
   zone                 = "asia-northeast1-b"
   network              = dependency.vpc.outputs.network
-  subnetwork           = dependency.vpc.outputs.private_subnetwork
+  subnetwork           = dependency.vpc.outputs.private_subnetwork2
   ubuntu_instance_type = "n2-standard-2"
   app_tag_value        = "robindemo"
 }
