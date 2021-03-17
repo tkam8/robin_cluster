@@ -26,7 +26,7 @@ dependency "vpc" {
     private_subnetwork_cidr_block            = "192.168.10.0/24"
     private_subnetwork_secondary_cidr_block  = "192.168.11.0/24"
   }
-  mock_outputs_allowed_terraform_commands = ["validate", "plan"]
+  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   #skip_outputs = true
 }
 
