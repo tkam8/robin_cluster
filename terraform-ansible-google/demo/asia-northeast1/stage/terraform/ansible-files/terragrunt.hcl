@@ -44,6 +44,7 @@ dependency "robin1" {
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
 }
+
 dependency "robin2" {
   config_path = "../functions/robin_worker1"
 
@@ -53,6 +54,7 @@ dependency "robin2" {
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
 }
+
 dependency "robin3" {
   config_path = "../functions/robin_worker2"
 
