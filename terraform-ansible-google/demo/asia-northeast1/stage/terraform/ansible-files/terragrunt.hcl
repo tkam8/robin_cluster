@@ -28,8 +28,6 @@ dependency "bigip1" {
   config_path = "../functions/bigip_ecmp"
 
   mock_outputs = {
-    bigip1_public_ip    = "1.1.1.1"
-    bigip1_private_ip   = "2.2.2.2"
     f5_public_ip        = "2.2.2.3"
     f5_private_ip       = "2.2.2.4"
   }
@@ -41,7 +39,7 @@ dependency "robin1" {
   config_path = "../functions/robin_master1"
 
   mock_outputs = {
-    robin1_endpoint     = "3.3.3.1"
+    centos_public_ip     = "3.3.3.1"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   #skip_outputs = true
@@ -51,7 +49,7 @@ dependency "robin2" {
   config_path = "../functions/robin_worker1"
 
   mock_outputs = {
-    robin2_endpoint     = "3.3.3.2"
+    centos_public_ip     = "3.3.3.2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   #skip_outputs = true
@@ -61,7 +59,7 @@ dependency "robin3" {
   config_path = "../functions/robin_worker2"
 
   mock_outputs = {
-    robin3_endpoint     = "3.3.3.3"
+    centos_public_ip     = "3.3.3.3"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   #skip_outputs = true

@@ -17,7 +17,7 @@ dependency "vpc" {
   mock_outputs = {
     network              = "networkName"
     public_subnetwork    = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet1"
-    #private_subnetwork2  = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet2"
+    private_subnetwork2  = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   #skip_outputs = true
@@ -31,7 +31,7 @@ inputs = {
   zone                   = "asia-northeast1-b"
   network                = dependency.vpc.outputs.network
   subnetwork             = dependency.vpc.outputs.public_subnetwork
-  #subnetwork2            = dependency.vpc.outputs.private_subnetwork2
+  subnetwork2            = dependency.vpc.outputs.private_subnetwork2
   centos_instance_type   = "e2-standard-4"
   disk_size              = 50
   app_tag_value          = "terrydemo"
