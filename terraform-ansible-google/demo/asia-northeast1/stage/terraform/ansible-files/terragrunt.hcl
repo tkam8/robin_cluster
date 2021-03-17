@@ -42,7 +42,7 @@ dependency "robin1" {
     robin1_endpoint     = "3.3.3.1"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
-  skip_outputs = true
+  #skip_outputs = true
 }
 
 dependency "robin2" {
@@ -52,7 +52,7 @@ dependency "robin2" {
     robin2_endpoint     = "3.3.3.2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
-  skip_outputs = true
+  #skip_outputs = true
 }
 
 dependency "robin3" {
@@ -62,7 +62,7 @@ dependency "robin3" {
     robin3_endpoint     = "3.3.3.3"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
-  skip_outputs = true
+  #skip_outputs = true
 }
 
 
