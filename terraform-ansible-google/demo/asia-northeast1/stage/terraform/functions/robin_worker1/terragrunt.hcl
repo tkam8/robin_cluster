@@ -20,7 +20,7 @@ dependency "vpc" {
     private_subnetwork2  = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
-  #skip_outputs = true
+  skip_outputs = true
 }
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
