@@ -16,7 +16,7 @@ dependency "vpc" {
 
   mock_outputs = {
     network             = "networkName"
-    private_subnetwork   = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet1"
+    private_subnetwork2   = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet1"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
@@ -29,7 +29,7 @@ inputs = {
   region               = "asia-northeast1"
   zone                 = "asia-northeast1-b"
   network              = dependency.vpc.outputs.network
-  subnetwork2           = dependency.vpc.outputs.private_subnetwork
+  subnetwork           = dependency.vpc.outputs.private_subnetwork2
   ubuntu_instance_type = "n2-standard-2"
   app_tag_value        = "robindemo"
 }
