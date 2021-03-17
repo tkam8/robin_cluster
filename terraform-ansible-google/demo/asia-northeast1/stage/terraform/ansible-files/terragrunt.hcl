@@ -32,7 +32,7 @@ dependency "bigip1" {
     bigip1_private_ip   = "2.2.2.2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
-  #skip_outputs = true
+  skip_outputs = true
 }
 
 dependency "robin1" {
