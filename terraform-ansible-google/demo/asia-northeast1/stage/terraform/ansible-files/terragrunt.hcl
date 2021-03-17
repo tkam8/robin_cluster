@@ -31,6 +31,7 @@ dependency "bigip1" {
     bigip1_public_ip    = "1.1.1.1"
     bigip1_private_ip   = "2.2.2.2"
     f5_public_ip        = "2.2.2.3"
+    f5_private_ip       = "2.2.2.4"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
