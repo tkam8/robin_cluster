@@ -17,6 +17,7 @@ dependency "vpc" {
   mock_outputs = {
     network             = "networkName"
     public_subnetwork   = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet1"
+    private_subnetwork  = "https://www.googleapis.com/compute/v1/projects/f5-gcs-4261-sales-apcj-japan/regions/asia-northeast1/subnetworks/mock-subnet2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   #skip_outputs = true
@@ -24,13 +25,14 @@ dependency "vpc" {
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
-  name_prefix           = "demo-robin-master"
-  project               = "f5-gcs-4261-sales-apcj-japan"
-  region                = "asia-northeast1"
-  zone                  = "asia-northeast1-b"
-  network               = dependency.vpc.outputs.network
-  subnetwork            = dependency.vpc.outputs.public_subnetwork
-  centos_instance_type  = "e2-standard-4"
-  disk_size             = 50
-  app_tag_value         = "terrydemo"
+  name_prefix            = "demo-robin-master"
+  project                = "f5-gcs-4261-sales-apcj-japan"
+  region                 = "asia-northeast1"
+  zone                   = "asia-northeast1-b"
+  network                = dependency.vpc.outputs.network
+  subnetwork             = dependency.vpc.outputs.public_subnetwork
+  subnetwork2            = dependency.vpc.outputs.private_subnetwork
+  centos_instance_type   = "e2-standard-4"
+  disk_size              = 50
+  app_tag_value          = "terrydemo"
 }
