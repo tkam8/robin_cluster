@@ -30,6 +30,7 @@ dependency "bigip1" {
   mock_outputs = {
     bigip1_public_ip    = "1.1.1.1"
     bigip1_private_ip   = "2.2.2.2"
+    f5_public_ip        = "2.2.2.3"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
@@ -68,17 +69,17 @@ dependency "robin3" {
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
-  terragrunt_path              = "${get_terragrunt_dir()}"
-  app_tag_value                = "terryrobincluster"
-  robin1_endpoint                = dependency.robin1.outputs.centos_public_ip
-  robin2_endpoint                = dependency.robin2.outputs.centos_public_ip
-  robin3_endpoint                = dependency.robin3.outputs.centos_public_ip
+  terragrunt_path                 = "${get_terragrunt_dir()}"
+  app_tag_value                   = "terryrobincluster"
+  robin1_endpoint                 = dependency.robin1.outputs.centos_public_ip
+  robin2_endpoint                 = dependency.robin2.outputs.centos_public_ip
+  robin3_endpoint                 = dependency.robin3.outputs.centos_public_ip
   // cluster1_username            = dependency.gke1.outputs.cluster_username
   // cluster2_username            = dependency.gke2.outputs.cluster_username
   // cluster3_username            = dependency.gke3.outputs.cluster_username
   // cluster1_password            = dependency.gke1.outputs.cluster_password
   // cluster2_password            = dependency.gke2.outputs.cluster_password
   // cluster3_password            = dependency.gke3.outputs.cluster_password
-  bigip1_public_ip             = dependency.bigip1.outputs.f5_public_ip
-  bigip1_private_ip            = dependency.bigip1.outputs.f5_private_ip
+  bigip1_public_ip                = dependency.bigip1.outputs.f5_public_ip
+  bigip1_private_ip               = dependency.bigip1.outputs.f5_private_ip
 }
