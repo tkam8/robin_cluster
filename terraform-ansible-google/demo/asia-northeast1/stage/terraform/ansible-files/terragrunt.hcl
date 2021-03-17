@@ -41,6 +41,7 @@ dependency "robin1" {
   mock_outputs = {
     robin1_public_ip    = "1.1.1.4"
     robin1_private_ip   = "2.2.2.5"
+    robin1_endpoint     = "3.3.3.1"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
@@ -51,6 +52,7 @@ dependency "robin2" {
   mock_outputs = {
     robin2_public_ip    = "1.1.1.5"
     robin2_private_ip   = "2.2.2.6"
+    robin2_endpoint     = "3.3.3.2"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
@@ -61,6 +63,7 @@ dependency "robin3" {
   mock_outputs = {
     robin3_public_ip    = "1.1.1.6"
     robin3_private_ip   = "2.2.2.7"
+    robin3_endpoint     = "3.3.3.3"
   }
   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
   skip_outputs = true
