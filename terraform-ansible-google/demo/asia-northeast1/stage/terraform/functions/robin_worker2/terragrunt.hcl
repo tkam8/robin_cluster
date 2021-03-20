@@ -42,7 +42,7 @@ inputs = {
   network                = dependency.vpc.outputs.network
   subnetwork             = dependency.vpc.outputs.public_subnetwork
   subnetwork2            = dependency.vpc2.outputs.private_subnetwork
-  centos_instance_type   = "e2-standard-4"
+  centos_instance_type   = "e2-standard-8"
   disk_size              = 50
   app_tag_value          = "terrydemo"
 }
