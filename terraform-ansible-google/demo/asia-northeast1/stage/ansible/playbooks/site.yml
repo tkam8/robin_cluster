@@ -1,11 +1,11 @@
 
 ---
 
-- name: Onboarding BIG-IP
-  hosts: F5_systems
-  gather_facts: false
-  roles:
-   - f5_onboarding
+# - name: Onboarding BIG-IP
+#   hosts: F5_systems
+#   gather_facts: false
+#   roles:
+#    - f5_onboarding
 
 
 # - name: BIG-IP DO declaration
