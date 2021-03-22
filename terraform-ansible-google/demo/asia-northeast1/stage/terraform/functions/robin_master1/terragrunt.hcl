@@ -43,6 +43,6 @@ inputs = {
   subnetwork             = dependency.vpc.outputs.public_subnetwork
   subnetwork2            = dependency.vpc2.outputs.private_subnetwork
   centos_instance_type   = "e2-standard-4"
-  disk_size              = 50
+  disk_size              = 60
   app_tag_value          = "terrydemo"
 }
