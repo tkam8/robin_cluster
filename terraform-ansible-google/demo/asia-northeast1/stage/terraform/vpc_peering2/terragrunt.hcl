@@ -24,7 +24,7 @@ dependency "vpc" {
 }
 
 dependency "vpc3" {
-  config_path = "../vpc2"
+  config_path = "../vpc3"
 
   mock_outputs = {
     network                  = "networkName"
