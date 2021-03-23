@@ -24,16 +24,16 @@ include {
   path = "../../../../terragrunt.hcl"
 }
 
-dependency "bigip1" {
-  config_path = "../functions/bigip_ecmp"
+// dependency "bigip1" {
+//   config_path = "../functions/bigip_ecmp"
 
-  mock_outputs = {
-    f5_public_ip        = "2.2.2.3"
-    f5_private_ip       = "2.2.2.4"
-  }
-  mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
-  #skip_outputs = true
-}
+//   mock_outputs = {
+//     f5_public_ip        = "2.2.2.3"
+//     f5_private_ip       = "2.2.2.4"
+//   }
+//   mock_outputs_allowed_terraform_commands = ["validate", "plan", "destroy"]
+//   #skip_outputs = true
+// }
 
 dependency "robin1" {
   config_path = "../functions/robin_master1"
@@ -79,6 +79,6 @@ inputs = {
   // cluster1_password            = dependency.gke1.outputs.cluster_password
   // cluster2_password            = dependency.gke2.outputs.cluster_password
   // cluster3_password            = dependency.gke3.outputs.cluster_password
-  bigip1_public_ip                = dependency.bigip1.outputs.f5_public_ip
-  bigip1_private_ip               = dependency.bigip1.outputs.f5_private_ip
+  // bigip1_public_ip                = dependency.bigip1.outputs.f5_public_ip
+  // bigip1_private_ip               = dependency.bigip1.outputs.f5_private_ip
 }

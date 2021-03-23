@@ -11,8 +11,8 @@ include {
   path = "../../../../../terragrunt.hcl"
 }
 
-dependency "vpc" {
-  config_path = "../../vpc"
+dependency "vpc3" {
+  config_path = "../../vpc3"
 
   mock_outputs = {
     network             = "networkName"
@@ -28,8 +28,8 @@ inputs = {
   project              = "f5-gcs-4261-sales-apcj-japan"
   region               = "asia-northeast1"
   zone                 = "asia-northeast1-b"
-  network              = dependency.vpc.outputs.network
-  subnetwork           = dependency.vpc.outputs.public_subnetwork
+  network              = dependency.vpc3.outputs.network
+  subnetwork           = dependency.vpc3.outputs.public_subnetwork
   ubuntu_instance_type = "n2-standard-2"
   app_tag_value        = "robindemo"
 }
